@@ -1,0 +1,24 @@
+/* TeamMatches/index.css */
+
+.team-matches-container {
+    position: relative;
+  }
+  
+  .team-banner {
+    width: 100%;
+    max-width: 600px; /* adjust as needed */
+    margin: 20px 0;
+  }
+  
+  .recent-matches-container {
+    margin-top: 20px;
+  }
+  
+  .loader-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
