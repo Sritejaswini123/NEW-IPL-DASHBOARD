@@ -12,8 +12,8 @@ const TeamMatches = () => {
     try {
       const response = await axios.get(`https://apis.ccbp.in/ipl/${id}`);
       const fetchedData = response.data;
+      console.log(fetchedData)
       
-
       const getFormattedObject = data => ({
         umpires: data.umpires,
         result: data.result,
@@ -27,21 +27,15 @@ const TeamMatches = () => {
         secondInnings: data.second_innings,
         matchStatus: data.match_status,
       })
-
-    
-
+      console.log(getFormattedObject)
+ 
       const formattedData = {
         teamBannerURL: fetchedData.team_banner_url,
         latestMatch: getFormattedObject(fetchedData.latest_match_details), 
       }
-
       const mainData = formattedData.latestMatch
       console.log(mainData )
-
-      setRecentMatchesData([mainData]);
-
-
-      
+      setRecentMatchesData([mainData])
     }
   
     catch (error) {

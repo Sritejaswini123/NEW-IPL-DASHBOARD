@@ -3,13 +3,23 @@ import './index.css';
 
 const LatestMatch = (props) => {
     const { matchData } = props;
-    const { competingTeam, competingTeamLogo } = matchData;
+    const { competingTeam, competingTeamLogo, matchStatus , umpires,firstInnings, secondInnings, manOfTheMatch, date, venue} = matchData;
 
     return (
         <div className="latest-match-container">
             <img alt='competingTeamLogo' src={competingTeamLogo} />
             <p>{competingTeam}</p>
-        </div>
+            <p>{ matchStatus}</p>
+            <p> date{ date}</p>
+            <p>venue{venue}</p>
+            <div>
+                <p>umpires: { umpires}</p>
+                <p> firstInnings{firstInnings}</p>
+                <p> secondInnings{ secondInnings}</p>
+                <p>  manOfTheMatch{ manOfTheMatch}</p>
+            </div>
+            </div>
+
     );
 };
 
